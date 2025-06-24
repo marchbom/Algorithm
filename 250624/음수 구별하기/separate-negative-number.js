@@ -4,4 +4,6 @@ let num = Number(input)
 if (num < 0 )  {
  console.log(num),
  console.log('minus')
-}    
+} else {
+    console.log(num)
+}
