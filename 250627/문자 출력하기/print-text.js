@@ -1,4 +1,9 @@
 const fs = require('fs');
-let input = readFileSync(0).toString().trim().split(' ');
+let input = fs.readFileSync(0).toString().trim();
 
-let num = Number(input[0])
+let num = input[0];
+
+for(let i = 0; i < 8; i++) {
+    process.stdout.write(num);
+
+}
