@@ -6,7 +6,7 @@ let result = ""
 
 if(a > 0) {
     for(let i = 1; i <= b; i++) {
-        result += a
+        result += a + ""
     }
 }
 if(a < 0)  {
