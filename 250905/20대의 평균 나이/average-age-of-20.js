@@ -4,7 +4,7 @@ const input = fs.readFileSync(0).toString().split("\n").map(Number);
 let result = 0
 let avg = 0;
 let count = 0
-for(let i = 0; i <= input.length; i++) {
+for(let i = 0; i < input.length; i++) {
     result += input[i]
     count++;
     if(input[i] > 29) {
