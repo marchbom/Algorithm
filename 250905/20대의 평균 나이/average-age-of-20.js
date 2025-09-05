@@ -8,6 +8,9 @@ for(let i = 0; i < input.length; i++) {
     if(input[i] > 29) {
         break;
     }
+    if(input[i] < 20) {
+        break;
+    }
     result += input[i]
     count++;
     avg = (result / count).toFixed(2)
