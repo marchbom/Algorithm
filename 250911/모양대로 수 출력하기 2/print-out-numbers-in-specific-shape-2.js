@@ -1,15 +1,13 @@
 const fs = require('fs');
 const n = Number(fs.readFileSync(0).toString().trim());
 
+let num = [2,4,6,8];
+
 
 for(let i = 0; i < n; i++) {
-    let num = 2 + (i * 2)
     let str = ""
-
     for(let j = 0; j < n; j++) {
-        if(num >= 10) num = 2
-        str += num + " "
-        num += 2
+        str += num[(i + j) % num.length] + " "
     }
     console.log(str)
 }
