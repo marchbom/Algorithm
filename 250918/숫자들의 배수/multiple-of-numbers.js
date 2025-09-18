@@ -1,5 +1,5 @@
 const fs = require('fs')
-const input = Number(fs.readFileSync(0).toString().trim().split(""))
+const input = Number(fs.readFileSync(0).toString().trim())
 
 let result = []
 let count = 0
