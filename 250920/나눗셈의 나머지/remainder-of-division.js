@@ -1,13 +1,11 @@
 const fs = require('fs');
-const [aStr, bStr] = fs.readFileSync(0).toString().trim().split(" ");
-let a = Number(aStr);
-const b = Number(bStr);
+let [a, b] = fs.readFileSync(0).toString().trim().split(" ").map(Number)
 
 let count = Array(b).fill(0); 
 
-while (a > 0) {
-    const remainder = a % b;
-    count[remainder]++;
+while (a > 1) {
+    let remain = a % b;
+    count[remain]++;
     a = Math.floor(a / b);
 }
 
