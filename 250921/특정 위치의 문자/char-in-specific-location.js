@@ -2,7 +2,7 @@ const fs = require('fs')
 const input = fs.readFileSync(0).toString().trim()
 
 
-let arr = ['L', 'E', 'B', "R", 'O'];
+let arr = ['L', 'E', 'B', "R", 'O', 'S'];
 let idx = arr.indexOf(input)
 
 if(idx !== -1) {
