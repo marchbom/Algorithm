@@ -1,8 +1,12 @@
 const fs = require('fs')
 const input = fs.readFileSync(0).toString().trim()
 
+
+let result = ""
 for(const s of input) {
-    if(!isNaN(Number(s))) continue;
+    if(/[a-zA-Z]/.test(s)) {
+        result += s.toUpperCase()
+    }
 }
 
-console.log(input.toUpperCase())
+console.log(result)
