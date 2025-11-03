@@ -4,10 +4,17 @@ let [a, b] = input[0].split(" ").map(Number);
 // Please Write your code here.
 
 function calculator(a, b) {
-    let max = Math.max(a, b) + 25;
-    let min = Math.min(a, b) * 2
-    return [max, min]
+    let result = []
+    if(a > b) {
+        a = a + 25;
+        b = b * 2
+    } else {
+        a = a * 2;
+        b = b + 25
+    }
+
+    return [a, b]
 }
 
-let [max, min] = calculator(a, b)
-console.log(min, max);
+let [_a, _b] = calculator(a, b)
+console.log(_a, _b);
