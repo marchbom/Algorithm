@@ -5,18 +5,16 @@ let b = Number(input[1]);
 // Please Write your code here.
 
 function solution(a, b) {
-    let result = []
-    let max = 0;
-    let min = 0
     if(a > b) {
-        max = a
-        min = b
+        a = a * 2
+        b = b + 10
     } else {
-        max = b
-        min = a
+        a = a + 10
+        b = b * 2
     }
 
-    return [min + 10, max * 2].join(" ")
+    return [a, b]
 }
 
-console.log(solution(a, b))
+let [num1, num2] = solution(a, b)
+console.log(num1, num2)
