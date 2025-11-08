@@ -1,19 +1,14 @@
 function solution(n) {
-  const primeList = [];
-  
-  for (let i = 2; i <= n; i++) {
-    let isPrime = true;
-
-    for (const p of primeList) {
-      if (p * p > i) break;     
-      if (i % p === 0) {         
-        isPrime = false;
-        break;
-      }
+    let primeList = Array(n + 1).fill(true);
+    primeList[0] = false;
+    primeList[1] = false;
+    
+    for(let i = 2; i * i <= n; i++) {
+        if(primeList[i]) {
+            for(let j = i * i; j <= n; j += i) {
+                primeList[j] = false;
+            }
+        }
     }
-
-    if (isPrime) primeList.push(i);
-  }
-
-  return primeList.length;
+    return primeList.filter(Boolean).length;
 }
